@@ -81,6 +81,9 @@ vim.opt.expandtab = true
 -- Set keymap to launch Netrw
 vim.keymap.set('n', '<leader>pf', '<cmd>Ex<CR>', { desc = 'Go to Netrw [f]ile tree' })
 
+-- Set keymap to switch tabs
+vim.keymap.set('n', '<leader>pt', '<cmd>tabnext<CR>', { desc = 'Go to next [t]ab' })
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -489,10 +492,10 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         powershell_es = {},
-        pylsp = {},
+        -- pylsp = {},
         -- clangd = {},
         gopls = {},
-        -- pyright = {},
+        pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
